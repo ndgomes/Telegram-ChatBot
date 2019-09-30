@@ -1,5 +1,5 @@
 import telebot
-import requests
+#import requests
  
 from telebot import types
  
@@ -7,7 +7,13 @@ bot_token = '947391023:AAHvrZui6RmAngetinFaJProC7p4V7_twac'
 bot = telebot.TeleBot(token=bot_token)
  
 markup = types.ReplyKeyboardRemove(selective=False)
- 
+
+# BOT - COMANDO ERROR
+@bot.message_handler(func=lambda message: True)
+def send_error(message):
+    chatid = message.chat.id
+    bot.send_message(chatid,"Comando Inesxistente, se precisares de ajudar faz: /help")
+
 # BOT - START
 @bot.message_handler(commands=['start'])
 def send_welcome(message):    
@@ -48,5 +54,7 @@ def aderir_grupo(message):
         bot.send_message(chatid, "Escolheste o 2")
     elif aderir == 3:
         bot.send_message(chatid, "Escolheste o 3")
+    else:
+        bot.send_message(chatid, "Escolheste uma operacao invalida")
  
 bot.polling()
