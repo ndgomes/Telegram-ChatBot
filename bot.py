@@ -128,8 +128,9 @@ def vip4(message):
 # BOT - INFORMACAO
 @bot.callback_query_handler(lambda q: q.data == 'informacao')
 def informacao(message):
-    bot.send_message(message.from_user.id,"<b>GreenBookTips</b> - Aberto desde <b>24/09</b>\n\n"
-                                          "👉 1 Mês: <b>+106€</b>\n"
+    bot.send_message(message.from_user.id,"<b>GreenBookTips</b> - Aberto desde <b>24/08</b>\n\n"
+                                          "🍀 <b>Grupo Free:</b>\n"
+                                          "👉 <b>1º Mês(24/09) - +106€</b>\n"
                                           "️▶️ 1 Semana: <b>+38€ | 138€</b>\n"
                                           "️▶️ 2 Semana: <b>+72€ | 210€</b>\n"
                                           "️▶️ 3 Semana: <b>+32€ | 242€</b>\n"
