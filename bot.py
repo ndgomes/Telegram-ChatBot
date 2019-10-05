@@ -23,20 +23,25 @@ def send_welcome(message):
                              "🍀 <b>Grupo de Apostas Desportivas</b>, especializado em: ⚽️🎾🏀\n\n"
                              '👉 <b>Grupo FREE:</b> <a href="https://t.me/joinchat/AAAAAFQ9n54109kt-txTXQ">GreenBookTips FREE</a>\n'
                              "❓ <b>Qualquer Dúvida:</b> @TipsGreenBook\n\n"
-                             "👍 Caso estejas interessado em entrar no nosso grupo clica em VIP e escolhe o teu plano de subscrição !\n"
+                             "👍 Caso estejas interessado em entrar no nosso grupo carrega em GRUPO VIP e escolhe o teu plano de subscrição !\n"
                              "❗️ <b>Se precisares de ajuda enquanto usas o Bot faz:</b> /help"
                              , reply_markup=markup, parse_mode="HTML")
 
 # BOT - GRUPO
 @bot.callback_query_handler(lambda q: q.data == 'grupo')
 def grupo(message):
-    btn1 = types.InlineKeyboardButton("10€ - 1Mês", callback_data='vip1')
-    btn2 = types.InlineKeyboardButton("18€ - 2Meses", callback_data='vip2')
-    btn3 = types.InlineKeyboardButton("25€ - 3Meses", callback_data='vip3')
-    btn4 = types.InlineKeyboardButton("45€ - 6Meses", callback_data='vip4')
+    btn1 = types.InlineKeyboardButton("Plano 1", callback_data='vip1')
+    btn2 = types.InlineKeyboardButton("Plano 2", callback_data='vip2')
+    btn3 = types.InlineKeyboardButton("Plano 3", callback_data='vip3')
+    btn4 = types.InlineKeyboardButton("Plano 4", callback_data='vip4')
     markup = types.InlineKeyboardMarkup(row_width=4)            
     markup.add(btn1,btn2,btn3,btn4)
-    bot.send_message(message.from_user.id, "👉 <b>Escolhe o teu Plano de Subscrição no nosso Grupo VIP:</b>", reply_markup=markup, parse_mode="HTML")
+    bot.send_message(message.from_user.id, "👉 <b>Escolhe o teu Plano de Subscrição no nosso Grupo VIP:</b>\n\n"
+                                           "🔺 <b>Plano 1</b> - 10€ / 1Mês\n"
+                                           "🔺 <b>Plano 2</b> - 18€ / 2Meses\n"
+                                           "🔺 <b>Plano 3</b> - 25€ / 3Meses\n"
+                                           "🔺 <b>Plano 4</b> - 45€ / 6Meses\n"
+                                           , reply_markup=markup, parse_mode="HTML")
     
 @bot.callback_query_handler(lambda q: q.data == 'vip1')
 def vip1(message):
