@@ -18,7 +18,7 @@ def send_welcome(message):
     btn2 = types.InlineKeyboardButton("+ INFO", callback_data='informacao')
     markup = types.InlineKeyboardMarkup(row_width=2)            
     markup.add(btn1,btn2)
-    bot.send_message(userID, u"<b>✅ Bem-Vindo, {}</b>" .format(UserFirst).encode('utf-8') + "<b> ! ✅\n\n</b>"
+    bot.send_message(userID, "<b>✅ Bem-Vindo, {}</b>" .format(UserFirst) + "<b> ! ✅\n\n</b>"
                              "🗣 <b>Olá !</b> Sou o Bot do grupo <b>GreenBookTips</b>, fui criado para facilitar a tua entrada no nosso Grupo VIP, segue todos os passos para poderes entrar no grupo e ganhar connosco !\n\n"
                              "🍀 <b>Grupo de Apostas Desportivas</b>, especializado em: ⚽️🎾🏀\n\n"
                              '👉 <b>Grupo FREE:</b> <a href="https://t.me/joinchat/AAAAAFQ9n54109kt-txTXQ">GreenBookTips FREE</a>\n'
