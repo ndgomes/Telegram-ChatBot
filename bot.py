@@ -18,8 +18,8 @@ def send_welcome(message):
     btn2 = types.InlineKeyboardButton("+ INFO", callback_data='informacao')
     markup = types.InlineKeyboardMarkup(row_width=2)            
     markup.add(btn1,btn2)
-    bot.send_message(userID, "<b>✅ Bem-Vindo, {}</b>" .format(UserFirst) + "<b> ! ✅\n\n</b>"
-                             "🗣 <b>Olá !</b> Sou o Bot do grupo <b>GreenBookTips</b>, fui criado para facilitar a tua entrada no nosso Grupo VIP, segue todos os passos para poderes entrar no grupo e ganhar connosco !\n\n"
+    bot.send_message(userID, "<b>✅ Bem-Vindo, {}</b>" .format(UserFirst) + "<b> ! ✅</b>", parse_mode="HTML")
+    bot.send_message(userID, "🗣 <b>Olá !</b> Sou o Bot do grupo <b>GreenBookTips</b>, fui criado para facilitar a tua entrada no nosso Grupo VIP, segue todos os passos para poderes entrar no grupo e ganhar connosco !\n\n"
                              "🍀 <b>Grupo de Apostas Desportivas</b>, especializado em: ⚽️🎾🏀\n\n"
                              '👉 <b>Grupo FREE:</b> <a href="https://t.me/joinchat/AAAAAFQ9n54109kt-txTXQ">GreenBookTips FREE</a>\n'
                              "❓ <b>Qualquer Dúvida:</b> @TipsGreenBook\n\n"
@@ -51,7 +51,7 @@ def vip1(message):
     userLast = message.from_user.last_name
     btn1 = types.InlineKeyboardButton("Multibanco", callback_data='mb')
     btn2 = types.InlineKeyboardButton("Neteller", callback_data='nt')
-    btn3 = types.InlineKeyboardButton("Paypal", callback_data='pp')
+    btn3 = types.InlineKeyboardButton("PayPal", callback_data='pp')
     markup = types.InlineKeyboardMarkup(row_width=3)            
     markup.add(btn1,btn2,btn3)
     bot.send_message(userID, "▶️ Escolheste o <b>Plano de Subscrição 1</b>\n\n"
@@ -63,7 +63,7 @@ def vip1(message):
                              "<b>Total:</b> 10€ - 1 Mês\n\n"
                              "👉 <b>Escolhe o Método de pagamento para efetuares o pagamento:</b>",reply_markup=markup, parse_mode="HTML")
     bot.send_message("375387984", "<b>==========\n  ENTRADA \n ==========\n</b> -> <b>ID:</b> {}" .format(userID) + " || <b>Username:</b> @{}\n" .format(userNome) + 
-                     u"-> <b>First Name:</b> {}" .format(UserFirst).encode('utf-8') + u" || <b>Last Name:</b> {}\n" .format(userLast).encode('utf-8') + 
+                     "-> <b>First Name:</b> {}" .format(UserFirst) + " || <b>Last Name:</b> {}\n" .format(userLast) + 
                      "-> <b>1Mes | 10€</b>",parse_mode="HTML")
 
 @bot.callback_query_handler(lambda q: q.data == 'vip2')
@@ -74,7 +74,7 @@ def vip2(message):
     userLast = message.from_user.last_name
     btn1 = types.InlineKeyboardButton("Multibanco", callback_data='mb')
     btn2 = types.InlineKeyboardButton("Neteller", callback_data='nt')
-    btn3 = types.InlineKeyboardButton("Paypal", callback_data='pp')
+    btn3 = types.InlineKeyboardButton("PayPal", callback_data='pp')
     markup = types.InlineKeyboardMarkup(row_width=3)            
     markup.add(btn1,btn2,btn3)
     bot.send_message(userID, "▶️ Escolheste o <b>Plano de Subscrição 2</b>\n\n"
@@ -86,7 +86,7 @@ def vip2(message):
                              "<b>Total:</b> 18€ - 2 Meses\n\n"
                              "👉 <b>Escolhe o Método de pagamento para efetuares o pagamento:</b>",reply_markup=markup, parse_mode="HTML")
     bot.send_message("375387984","<b>==========\n  ENTRADA \n ==========\n</b> -> <b>ID:</b> {}" .format(userID) + " || <b>Username:</b> @{}\n" .format(userNome) + 
-                     u"-> <b>First Name:</b> {}" .format(UserFirst).encode('utf-8') + u" || <b>Last Name:</b> {}\n" .format(userLast).encode('utf-8') + 
+                     "-> <b>First Name:</b> {}" .format(UserFirst) + " || <b>Last Name:</b> {}\n" .format(userLast) + 
                      "-> <b>2Meses | 18€</b>",parse_mode="HTML")
 
 @bot.callback_query_handler(lambda q: q.data == 'vip3')
@@ -109,7 +109,7 @@ def vip3(message):
                              "<b>Total:</b> 25€ - 3 Meses\n\n"
                              "👉 <b>Escolhe o Método de pagamento para efetuares o pagamento:</b>",reply_markup=markup, parse_mode="HTML")
     bot.send_message("375387984","<b>==========\n  ENTRADA \n ==========\n</b> -> <b>ID:</b> {}" .format(userID) + " || <b>Username:</b> @{}\n" .format(userNome) + 
-                     u"-> <b>First Name:</b> {}" .format(UserFirst).encode('utf-8') + u" || <b>Last Name:</b> {}\n" .format(userLast).encode('utf-8') + 
+                     "-> <b>First Name:</b> {}" .format(UserFirst) + " || <b>Last Name:</b> {}\n" .format(userLast) + 
                      "-> <b>3Meses | 25€</b>",parse_mode="HTML")
 
 @bot.callback_query_handler(lambda q: q.data == 'vip4')
@@ -120,7 +120,7 @@ def vip4(message):
     userLast = message.from_user.last_name
     btn1 = types.InlineKeyboardButton("Multibanco", callback_data='mb')
     btn2 = types.InlineKeyboardButton("Neteller", callback_data='nt')
-    btn3 = types.InlineKeyboardButton("Paypal", callback_data='pp')
+    btn3 = types.InlineKeyboardButton("PayPal", callback_data='pp')
     markup = types.InlineKeyboardMarkup(row_width=3)            
     markup.add(btn1,btn2,btn3)
     bot.send_message(userID,"▶️ Escolheste o <b>Plano de Subscrição 4</b>\n\n"
@@ -132,7 +132,7 @@ def vip4(message):
                              "<b>Total:</b> 45€ - 6 Meses\n\n"
                              "👉 <b>Escolhe o Método de pagamento para efetuares o pagamento:</b>",reply_markup=markup, parse_mode="HTML")
     bot.send_message("375387984","<b>==========\n  ENTRADA \n ==========\n</b> -> <b>ID:</b> {}" .format(userID) + " || <b>Username:</b> @{}\n" .format(userNome) + 
-                     u"-> <b>First Name:</b> {}" .format(UserFirst).encode('utf-8') + u" || <b>Last Name:</b> {}\n" .format(userLast).encode('utf-8') + 
+                     "-> <b>First Name:</b> {}" .format(UserFirst) + " || <b>Last Name:</b> {}\n" .format(userLast) + 
                      "-> <b>6Meses | 45€</b>",parse_mode="HTML")
 
 # BOT - PAGAMENTO
@@ -148,7 +148,7 @@ def mb(message):
                              "👇 Aguarda pela minha mensagem com os dados para efetuares o teu pagamento:\n"
                              ,parse_mode="HTML")
     bot.send_message("375387984","<b>=============\n  PAGAMENTO \n =============\n</b> -> <b>ID:</b> {}" .format(userID) + " || <b>Username:</b> @{}\n" .format(userNome) + 
-                     u"-> <b>First Name:</b> {}" .format(UserFirst).encode('utf-8') + u" || <b>Last Name:</b> {}\n" .format(userLast).encode('utf-8') + 
+                     "-> <b>First Name:</b> {}" .format(UserFirst) + " || <b>Last Name:</b> {}\n" .format(userLast) + 
                      "-> <b>Multibanco</b>",parse_mode="HTML")
 
 @bot.callback_query_handler(lambda q: q.data == 'nt')
@@ -162,7 +162,7 @@ def nt(message):
                              "👇 Aguarda pela minha mensagem com os dados para efetuares o teu pagamento:\n"
                              ,parse_mode="HTML")
     bot.send_message("375387984","<b>=============\n  PAGAMENTO \n =============\n</b> -> <b>ID:</b> {}" .format(userID) + " || <b>Username:</b> @{}\n" .format(userNome) + 
-                     u"-> <b>First Name:</b> {}" .format(UserFirst).encode('utf-8') + u" || <b>Last Name:</b> {}\n" .format(userLast).encode('utf-8') + 
+                     "-> <b>First Name:</b> {}" .format(UserFirst) + u" || <b>Last Name:</b> {}\n" .format(userLast) + 
                      "-> <b>Neteller</b>",parse_mode="HTML")
 
 @bot.callback_query_handler(lambda q: q.data == 'pp')
@@ -176,8 +176,8 @@ def pp(message):
                              "👇 Aguarda pela minha mensagem com os dados para efetuares o teu pagamento:\n"
                              ,parse_mode="HTML")
     bot.send_message("375387984","<b>=============\n  PAGAMENTO \n =============\n</b> -> <b>ID:</b> {}" .format(userID) + " || <b>Username:</b> @{}\n" .format(userNome) + 
-                     u"-> <b>First Name:</b> {}" .format(UserFirst).encode('utf-8') + u" || <b>Last Name:</b> {}\n" .format(userLast).encode('utf-8') + 
-                     "-> <b>Paypal</b>",parse_mode="HTML")
+                     "-> <b>First Name:</b> {}" .format(UserFirst) + " || <b>Last Name:</b> {}\n" .format(userLast) + 
+                     "-> <b>PayPal</b>",parse_mode="HTML")
 
 # BOT - INFORMACAO
 @bot.callback_query_handler(lambda q: q.data == 'informacao')
