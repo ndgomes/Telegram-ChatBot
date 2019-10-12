@@ -165,7 +165,7 @@ def nt(message):
     userLast = message.from_user.last_name
     bot.send_message(userID, "▶️ Escolheste o <b>Método de Pagamento por Neteller</b>\n\n"
                              "👉 Agora faz o teu pagamento para o email: <b>greenbooktips@email.com</b>\n\n"
-                             "👇 Assim que fizeres o pagamento envia um comprovativo de pagamento para:\n"
+                             "👇 Assim que fizeres o pagamento envia um <b>comprovativo de pagamento</b> para:\n"
                              "@TipsGreenBook"
                              ,parse_mode="HTML")
     bot.send_message("375387984","<b>=============\n  PAGAMENTO \n =============\n</b> -> <b>ID:</b> {}" .format(userID) + " || <b>Username:</b> @{}\n" .format(userNome) + 
@@ -180,7 +180,7 @@ def pp(message):
     userLast = message.from_user.last_name
     bot.send_message(userID, "▶️ Escolheste o <b>Método de Pagamento por PayPal</b>\n\n"
                              "👉 Agora faz o teu pagamento para o email: <b>greenbooktips@email.com</b>\n\n"
-                             "👇 Assim que fizeres o pagamento envia um comprovativo de pagamento para:\n"
+                             "👇 Assim que fizeres o pagamento envia um <b>comprovativo de pagamento</b> para:\n"
                              "@TipsGreenBook"
                              ,parse_mode="HTML")
     bot.send_message("375387984","<b>=============\n  PAGAMENTO \n =============\n</b> -> <b>ID:</b> {}" .format(userID) + " || <b>Username:</b> @{}\n" .format(userNome) + 
