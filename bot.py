@@ -143,7 +143,6 @@ def vip4(message):
                      "-> <b>6Meses | 45€</b>",parse_mode="HTML")
 
 # BOT - PAGAMENTO
-
 @bot.callback_query_handler(lambda q: q.data == 'mb')
 def mb(message):
     userID = message.from_user.id
@@ -165,8 +164,9 @@ def nt(message):
     UserFirst = message.from_user.first_name
     userLast = message.from_user.last_name
     bot.send_message(userID, "▶️ Escolheste o <b>Método de Pagamento por Neteller</b>\n\n"
-                             "👉 <b>O teu Pedido esta agora ser processado...</b>\n\n"
-                             "👇 Aguarda pela minha mensagem com os dados para efetuares o teu pagamento:\n"
+                             "👉 Agora faz o teu pagamento para o email: <b>greenbooktips@email.com</b>\n\n"
+                             "👇 Assim que fizeres o pagamento envia um comprovativo de pagamento para:\n"
+                             "@TipsGreenBook"
                              ,parse_mode="HTML")
     bot.send_message("375387984","<b>=============\n  PAGAMENTO \n =============\n</b> -> <b>ID:</b> {}" .format(userID) + " || <b>Username:</b> @{}\n" .format(userNome) + 
                      "-> <b>First Name:</b> {}" .format(UserFirst) + u" || <b>Last Name:</b> {}\n" .format(userLast) + 
@@ -179,8 +179,9 @@ def pp(message):
     UserFirst = message.from_user.first_name
     userLast = message.from_user.last_name
     bot.send_message(userID, "▶️ Escolheste o <b>Método de Pagamento por PayPal</b>\n\n"
-                             "👉 <b>O teu Pedido esta agora ser processado...</b>\n\n"
-                             "👇 Aguarda pela minha mensagem com os dados para efetuares o teu pagamento:\n"
+                             "👉 Agora faz o teu pagamento para o email: <b>greenbooktips@email.com</b>\n\n"
+                             "👇 Assim que fizeres o pagamento envia um comprovativo de pagamento para:\n"
+                             "@TipsGreenBook"
                              ,parse_mode="HTML")
     bot.send_message("375387984","<b>=============\n  PAGAMENTO \n =============\n</b> -> <b>ID:</b> {}" .format(userID) + " || <b>Username:</b> @{}\n" .format(userNome) + 
                      "-> <b>First Name:</b> {}" .format(UserFirst) + " || <b>Last Name:</b> {}\n" .format(userLast) + 
