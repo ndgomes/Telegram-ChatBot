@@ -202,7 +202,7 @@ def informacao(message):
 # BOT - LIVRO GREEN
 @bot.callback_query_handler(lambda q: q.data == 'gbook')
 def gbook(message):
-    bot.send_message(message.from_user.id,"🍀 <b>Visita o Canal Exclusivo de GREEN's</b>:"
+    bot.send_message(message.from_user.id,"🍀 <b>Visita o Canal Exclusivo de GREEN's</b>:\n"
                                           '👉 <a href="https://t.me/bookgreentips">LIVRO GREEN</a>', parse_mode="HTML")
 
 # BOT - MANAGEMENT
