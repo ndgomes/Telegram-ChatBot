@@ -165,7 +165,7 @@ def nt(message):
     UserFirst = message.from_user.first_name
     userLast = message.from_user.last_name
     bot.send_message(userID, "▶️ Escolheste o <b>Método de Pagamento por Neteller</b>\n\n"
-                             "👉 Agora faz o teu pagamento para o email: <b>greenbooktips@email.com</b>\n\n"
+                             "👉 Agora faz o teu pagamento para o email: <b>fryzenn@gmail.com</b>\n\n"
                              "👇 Assim que fizeres o pagamento envia um <b>comprovativo de pagamento</b> para:\n"
                              "@TipsGreenBook"
                              ,parse_mode="HTML")
@@ -180,7 +180,7 @@ def pp(message):
     UserFirst = message.from_user.first_name
     userLast = message.from_user.last_name
     bot.send_message(userID, "▶️ Escolheste o <b>Método de Pagamento por PayPal</b>\n\n"
-                             "👉 Agora faz o teu pagamento para o email: <b>greenbooktips@email.com</b>\n\n"
+                             "👉 Agora faz o teu pagamento para o email: <b>fryzenn1@gmail.com</b>\n\n"
                              "👇 Assim que fizeres o pagamento envia um <b>comprovativo de pagamento</b> para:\n"
                              "@TipsGreenBook"
                              ,parse_mode="HTML")
