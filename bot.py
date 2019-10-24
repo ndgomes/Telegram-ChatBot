@@ -29,7 +29,7 @@ def send_welcome(message):
     bot.send_message(userID, "<b>✅ Bem-Vindo, {}</b>" .format(UserFirst) + "<b> ! ✅</b>", parse_mode="HTML")
     bot.send_message(userID, "🗣 <b>Olá !</b> Sou o Bot do grupo <b>GreenBookTips</b>, fui criado para facilitar a tua entrada no nosso Grupo VIP, segue todos os passos para poderes entrar no grupo e ganhar connosco !\n\n"
                              "🍀 <b>Grupo de Apostas Desportivas</b>, especializado em: ⚽️🎾🏀\n\n"
-                             '👉 <b>Grupo FREE:</b> <a href="https://t.me/joinchat/AAAAAFQ9n54109kt-txTXQ">GreenBookTips FREE</a>\n'
+                             '👉 <b>Grupo:</b> <a href="https://t.me/joinchat/AAAAAFQ9n54109kt-txTXQ">GreenBookTips FREE</a>\n'
                              "❓ <b>Qualquer Dúvida:</b> @TipsGreenBook\n\n"
                              "👍 Caso estejas interessado em entrar no nosso grupo carrega em GRUPO VIP e escolhe o teu plano de subscrição !\n"
                              "❗️ <b>Se precisares de ajuda enquanto usas o Bot faz:</b> /help"
