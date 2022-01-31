@@ -12,7 +12,7 @@ class User:
     def __init__(self, name):
         self.id = None
 
-bot_token = '947391023:AAHvrZui6RmAngetinFaJProC7p4V7_twac'
+bot_token = '5111881778:AAF7-JkmSzGSlg8Hu_9vRpwTJ6aCLaWialE'
 bot = telebot.TeleBot(token=bot_token)
 server = Flask(__name__)
 
@@ -21,11 +21,10 @@ server = Flask(__name__)
 def send_welcome(message):
     userID = message.from_user.id
     UserFirst = message.from_user.first_name
-    btn1 = types.InlineKeyboardButton("GRUPO VIP", callback_data='grupo')
-    btn2 = types.InlineKeyboardButton("+ INFO", callback_data='informacao')
-    btn3 = types.InlineKeyboardButton("LIVRO GREEN", callback_data='gbook')
-    markup = types.InlineKeyboardMarkup(row_width=3)            
-    markup.add(btn1,btn2,btn3)
+    btn1 = types.InlineKeyboardButton("🇵🇹 PORTUGAL", callback_data='grupo')
+    btn2 = types.InlineKeyboardButton("🇧🇷 BRASIL", callback_data='informacao')
+    markup = types.InlineKeyboardMarkup(row_width=2)            
+    markup.add(btn1,btn2)
     bot.send_message(userID, "<b>✅ Bem-Vindo, {}</b>" .format(UserFirst) + "<b> ! ✅</b>", parse_mode="HTML")
     bot.send_message(userID, "🗣 <b>Olá !</b> Sou o Bot do grupo <b>GreenBookTips</b>, fui criado para facilitar a tua entrada no nosso Grupo VIP, segue todos os passos para poderes entrar no grupo e ganhar connosco !\n\n"
                              "🍀 <b>Grupo de Apostas Desportivas</b>, especializado em: ⚽️🎾🏀\n\n"
@@ -199,12 +198,6 @@ def informacao(message):
                                           "️▶️ 3 Semana: <b>+32€ | 242€</b>\n"
                                           "▶️ 4 Semana: <b>-34€ | 208€</b>\n", parse_mode="HTML")
 
-# BOT - LIVRO GREEN
-@bot.callback_query_handler(lambda q: q.data == 'gbook')
-def gbook(message):
-    bot.send_message(message.from_user.id,"🍀 <b>Visita o Canal Exclusivo de GREEN's</b>:\n"
-                                          '👉 <a href="https://t.me/bookgreentips">LIVRO GREEN</a>', parse_mode="HTML")
-
 # BOT - MANAGEMENT
 @bot.message_handler(commands=['managementsend'])
 def management(message):
@@ -222,14 +215,7 @@ def process_envio(message):
 
 def process_send_final(message):
     bot.send_message(User.id, message.text)
-    bot.send_message(message.from_user.id, "<b>MENSAGEM ENVIADA COM SUCESSO !!</b>", parse_mode='HTML')   
-
-# BOT - HELP
-@bot.message_handler(commands=['help'])
-def send_help(message):
-    bot.send_message(message.from_user.id,"❓<b>Precisas de Ajuda❓</b>\n\n"
-                                          "👉 Faz /start para poderes voltar para o inicio do Bot\n"
-                                          "👉 Se não te consegui ajudar envia mensagem privada para: @TipsGreenBook",parse_mode="HTML")
+    bot.send_message(message.from_user.id, "<b>MENSAGEM ENVIADA COM SUCESSO !!</b>", parse_mode='HTML')
 
 # BOT - COMANDO ERROR
 @bot.message_handler(func=lambda message: True, content_types=['text'])
