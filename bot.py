@@ -12,7 +12,7 @@ class User:
     def __init__(self, name):
         self.id = None
 
-bot_token = '5111881778:AAF7-JkmSzGSlg8Hu_9vRpwTJ6aCLaWialE'
+bot_token = '#########################'
 bot = telebot.TeleBot(token=bot_token)
 server = Flask(__name__)
 
